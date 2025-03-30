@@ -20,7 +20,6 @@ class PenerimaController extends Controller {
      *     path="/api/penerima",
      *     tags={"Penerima"},
      *     summary="Menampilkan semua penerima",
-     *     security={{"bearerAuth": {}}},
      *     description="Mengembalikan daftar semua penerima",
      *     @OA\Response(
      *         response=200,
@@ -38,7 +37,6 @@ class PenerimaController extends Controller {
      *     path="/api/penerima",
      *     tags={"Penerima"},
      *     summary="Menambahkan penerima baru",
-     *     security={{"bearerAuth": {}}},
      *     description="Membuat penerima baru dan mengembalikan data yang telah dibuat",
      *     @OA\RequestBody(
      *         required=true,

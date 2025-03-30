@@ -11,10 +11,13 @@ Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth.jwt'
 Route::get('/user', [AuthController::class, 'user'])->middleware('auth.jwt');
 
 // Rute yang membutuhkan autentikasi JWT
-Route::middleware(['auth.jwt'])->group(function () {
-    Route::post('/penerima', [PenerimaController::class, 'store']);
-    Route::get('/penerima', [PenerimaController::class, 'index']);
-});
+// Route::middleware(['auth.jwt'])->group(function () {
+//     Route::post('/penerima', [PenerimaController::class, 'store']);
+//     Route::get('/penerima', [PenerimaController::class, 'index']);
+// });
+
+Route::post('/penerima', [PenerimaController::class, 'store']);
+Route::get('/penerima', [PenerimaController::class, 'index']);
 
 // Rute yang bisa diakses tanpa autentikasi
 Route::get('/penerima/{id}', [PenerimaController::class, 'show']);
